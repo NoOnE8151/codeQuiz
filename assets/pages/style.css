@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Open+Sans:wght@500&family=Poppins:wght@500&display=swap');
+
+@media only screen and (min-width: 767px) {
+.noPc {
+  background-color: #3d3d3d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.noPc div {
+  font-size: 50px;
+}
+
+main, footer, header {
+  display: none;
+}
+}
+
+@media only screen and (max-width: 767px) {
+  .noPc {
+  display: none;
+}
+/* removed default padding and margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* setup theme */
+body {
+  background-color: #0B1F24;
+  color: #F8F3FC;
+}
+
+/* styling header */
+.headerCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  color: #F8F3FC;
+  position: relative;
+  right: 10px;
+}
+.headerCont h2 {
+  font-size: 29px;
+}
+
+/* styling quiz mode selection*/
+.introSec {
+  margin: 10px;
+  margin-bottom: -10px;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'Open Sans', sans-serif;
+}
+.quizModeSec {
+  margin: 20px;
+}
+.quizModeCont {
+  background-color: #012F48;
+  margin: 15px;
+  border-radius: 10px;
+  padding: 5px 3px;
+  transition: all 0.2s ease-in;
+}
+.quizModeCont:hover {
+  padding: 7px 5px;
+  background-color: #003755;
+}
+
+.quizModeLayout {
+  display: flex;
+  align-items: center;
+}
+.quizModeContentCont {
+  display: flex;
+  flex-direction: column;
+}
+.quizIcon {
+  width: 75px;
+}
+#codeQuizIcon {
+  padding: 10px;
+  padding-right: 15px;
+  width: 70px;
+}
+.quizTitle {
+  font-size: 23px;
+  margin: -5px 0;
+  font-family: 'baloo bhai 2', sans-serif;
+}
+.quizDescription {
+  color: floralwhite;
+  font-family: 'Open Sans', sans-serif;
+}
+.modeHeading {
+  margin: 0 5px;
+  margin-top: 30px;
+  margin-bottom: -10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  font-family: 'poppins', sans-serif;
+}
+
+/* styling footer */
+.footerSec {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  bottom: 10px;
+}
+.footerSec div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  font-size: 17px;
+  color: #F8F3FC;
+}
+.footerSec div a{
+  text-decoration: none;
+  color: skyblue;
+  font-family: 'baloo bhai 2', sans-serif;
+}
+
+/* post game selection screen */
+.gameRoot {
+  position: fixed;
+  background-color: #0B1F24;
+  top: 0; bottom: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gameRootHidden {
+  overflow: hidden;
+  width: 0; height: 0;
+}
+.popupCont {
+  background-color: #003551;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 35vh;
+  width: 75vw;
+  margin-bottom: 100px;
+  border-radius: 15px;
+  z-index: 10;
+  box-shadow: 1px 1px 200px 1px #002730;
+}
+.popupContHidden {
+  overflow: hidden;
+  width: 0; height: 0;
+}
+.popupHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  margin-left: -10px;
+}
+.cancelBtn {
+  position: relative;
+  font-size: 45px;
+  left: 50px; bottom: 20px;
+  color: #6E6E6EE3;
+}
+.cancelBtn:hover {
+  color: #6E6E6E;
+} 
+.popupDescription {
+  margin: 0 20px;
+  padding: 0 10px;
+  font-size: 16px;
+  text-align: center;
+}
+.btnCont {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.startBtn {
+  padding: 7px 45px;
+  border: none;
+  background-color: #00ADFF;
+  color: #F8F3FC;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 50px;
+  margin-bottom: -10px;
+  box-shadow: 2px 2px 15px 2px #00BEFF;
+  font-family: 'baloo bhai 2', sans-serif;
+  transition: all 0.2s ease-in;
+}
+.startBtn:hover {
+  background-color: #0095FF;
+  box-shadow: 2px 2px 18px 4px #009CFF;
+}
+
+/* actual quiz game */
+.quizCont {
+  background-color: #003551;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60vh;
+  width: 80vw;
+  z-index: 1;
+  border-radius: 15px;
+  overflow: auto;
+}
+.quizContHidden {
+  width: 0; height: 0;
+  overflow: hidden;
+}
+.questionCont {
+  padding: 20px 15px;
+  margin: 5px;
+}
+.question {
+  background-color: #0B1F24;
+  padding: 15px;
+  border-radius: 15px;
+}
+.optionCont {
+  list-style: none;
+  padding: 0 15px;
+}
+.option {
+  background-color: #0B1F24;
+  padding: 12px;
+  margin: 10px 5px;
+  border-radius: 15px;
+}
+
+/* quiz head */
+.quizHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -10px;
+  margin-top: 10px;
+}
+
+/* pagenation (next) button */
+.nextBtnCont {
+  position: fixed;
+  bottom: 120px;
+  display: flex;
+  justify-content: center;
+  width: 95vw;
+}
+.nextBtn, .menuBtn {
+  padding: 7px 45px;
+  border: none;
+  background-color: #00ADFF;
+  color: #F8F3FC;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 50px;
+  margin-bottom: -10px;
+  box-shadow: 2px 2px 15px 2px #00BEFF;
+  font-family: 'baloo bhai 2', sans-serif;
+  transition: all 0.2s ease-in;
+}
+.nextBtn, .menuBtn:hover {
+  background-color: #0095FF;
+  box-shadow: 2px 2px 18px 4px #009CFF;
+}
+.nextBtnContHidden {
+  display: none;
+}
+
+/* styling results */   
+.resultContHidden {
+  display: none;
+}
+.resultCont {
+  background-color: #003551;
+  width: 80vmin;
+  height: 50vmax;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px 5px #00576D;
+}
+.resultBody {
+  font-size: 20px;
+  height: 300px;
+  margin: 30px 40px;
+}
+.resultBody div {
+  margin: 10px;
+}
+.menuBtn {
+  margin: 10px 0;
+  width: 200px;
+}
+.menuBtnCont {
+  position: absolute;
+}
+#resultRoot {
+  z-index: 20;
+}
+}

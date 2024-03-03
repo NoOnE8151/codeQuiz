@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>codeQuiz | lobby</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <script defer src="questions.js"></script>
+</head>
+
+<body>
+  
+    <div class="noPc">
+    <div>👋 Hello this site is not available in desktop, please visit with mobile to get access.</div>
+  </div>
+  
+  <header>
+    <div class="headerCont">
+      <img src="../img/logo.png" width="60">
+      <h2>codeQuiz</h2>
+    </div>
+  </header>
+  
+  <main>
+    <section class="introSec">
+      <p>Welcome to codeQuiz! are you developer? basics are everything! so let's test your basic knowledge with codeQuiz, select a quiz mode to get stared.</p>
+    </section>
+    
+    <section class="quizModeSec">
+     <h2 class="modeHeading">codQuiz modes.</h2>
+       <div id="htmlMode" class="quizModeCont quizMode">
+        <div class="quizModeLayout">
+          <img class="quizIcon" src="../img/html.png">
+          <div class="quizModeContentCont">
+            <h3 class="quizTitle">HTML Quiz</h3>
+            <div class="quizDescription">questions about html</div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="cssMode" class="quizModeCont quizMode">
+        <div class="quizModeLayout">
+          <img class="quizIcon" src="../img/css.png">
+          <div class="quizModeContentCont">
+            <h3 class="quizTitle">CSS Quiz</h3>
+            <div class="quizDescription">questions about css</div>
+          </div>
+        </div>
+      </div>
+      
+      <h2 class="modeHeading">Extra for followers.</h2>
+      <div id="codeQuizMode" class="quizModeCont quizMode">
+        <div class="quizModeLayout">
+          <img id="codeQuizIcon" class="quizIcon" src="../img/logo.png">
+          <div class="quizModeContentCont">
+            <h3 class="quizTitle">codeQuiz</h3>
+            <div class="quizDescription">questions about codeConquests</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!--post selection popup -->
+    <div id="gameRoot" class="gameRoot gameRootHidden">
+      <div id="popupCont" class="popupCont">
+        <div class="popupHead">
+          <img class="popupIcon" src="../img/html.png" width="50">
+          <h2 class="quizTitle popupTitle">
+            HTML Quiz
+          </h2>
+          <span class="cancelBtn">&times;</span>
+        </div>
+        <div class="quizDescription popupDescription">
+          This quiz contains questions about HTML
+        </div>
+        <div class="btnCont">
+          <button class="startBtn">Start Quiz!</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- actual quiz game -->
+    <div id="quizCont" class="quizCont quizContHidden">
+              <div class="quizHead">
+          <img class="quizHeadIcon" src="../img/html.png" width="50">
+          <h2 class="quizHeadTitle">
+            HTML Quiz
+          </h2>
+        </div>
+      <div class="questionCont">
+        <div class="question">hello world! this is a demo question
+        </div>
+      </div>
+      <ul class="optionCont">
+        <li class="option">An element which contains another element inside it</li>
+        <li class="option">An element which contains another element inside it</li>
+        <li class="option">An element which contains another element inside it</li>
+        <li class="option">An element which contains another element inside it</li>
+      </ul>
+    </div>
+    
+          <div class="nextBtnCont nextBtnContHidden">
+      <button class="nextBtn">Next</button>
+    </div>
+    
+    <div id="resultRoot" class="gameRoot resultContHidden">
+    <div class="resultCont">
+      
+      <div class="quizHead resultHead">
+        <img class="quizHeadIcon" src="../img/html.png" width="50">
+        <h3 class="quizHeadTitle">HTML Quiz <span>Result</span></h3>
+      </div>
+      
+      <div class="resultBody">
+        <div>Total Questions <span id="queCount"></span></div>
+        <div>Wrong Guess <span id="wrongGuess"></span></div>
+        <div>Correct Guess <span id="score"></span></div>
+        
+        <div class="menuBtnCont">
+          <button id="reQuizBtn" class="menuBtn">Retake Quiz</button>
+          
+          <button id="mainMenuBtn" class="menuBtn">
+            Main Menu
+          </button>
+        </div>
+      </div>
+      
+      </div>
+      </div>
+  </main>
+  
+  <footer class="footerSec">
+    <div>&copy; <a href="https://www.instagram.com/codeconquests_?igsh=MTE1cTZtZzVtMWg1ZA==">codeConquests</a></div>
+  </footer>
+  
+</body>
+
+</html>
